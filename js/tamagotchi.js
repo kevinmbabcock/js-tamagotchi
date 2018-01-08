@@ -7,6 +7,24 @@ export class Tamagotchi {
     this.energy = 10;
   }
 
+  setHunger() {
+    setInterval(() => {
+      this.hunger--;
+    }, 60000);
+  }
+
+  setFun() {
+    setInterval(() => {
+      this.fun--;
+    }, 60000);
+  }
+
+  setEnergy() {
+    setInterval(() => {
+      this.energy--;
+    }, 60000);
+  }
+
   feed() {
 
   }
