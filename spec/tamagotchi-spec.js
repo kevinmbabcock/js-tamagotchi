@@ -28,4 +28,19 @@ describe('Tamagotchi', function() {
     expect(reusableTamagotchi.fun).toEqual(9);
     expect(reusableTamagotchi.energy).toEqual(9);
   })
+
+  it('increases hunger when fed', function() {
+    reusableTamagotchi.feed(5);
+    expect(reusableTamagotchi.hunger).toEqual(15);
+  })
+
+  it('increases fun when played with', function() {
+    reusableTamagotchi.play(5);
+    expect(reusableTamagotchi.fun).toEqual(15);
+  })
+
+  it('increases energy when sleeping', function() {
+    reusableTamagotchi.sleep(5);
+    expect(reusableTamagotchi.energy).toEqual(15);
+  })
 })

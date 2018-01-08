@@ -25,15 +25,15 @@ export class Tamagotchi {
     }, 60000);
   }
 
-  feed() {
-
+  feed(number) {
+    this.hunger += number;
   }
 
-  play() {
-
+  play(number) {
+    this.fun += number;
   }
 
-  sleep() {
-
+  sleep(number) {
+    this.energy += number;
   }
 }
