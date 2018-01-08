@@ -36,4 +36,12 @@ export class Tamagotchi {
   sleep(number) {
     this.energy += number;
   }
+
+  isAlive() {
+    if (this.hunger <= 0 || this.fun <= 0 || this.energy <= 0) {
+      return "I'm Dead";
+    } else {
+      return "Still kickin'";
+    }
+  }
 }

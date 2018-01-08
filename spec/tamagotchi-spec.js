@@ -43,4 +43,24 @@ describe('Tamagotchi', function() {
     reusableTamagotchi.sleep(5);
     expect(reusableTamagotchi.energy).toEqual(15);
   })
+
+  it('is dead with no activities for 10 minutes', function() {
+    jasmine.clock().tick(600001);
+    expect(reusableTamagotchi.isAlive()).toEqual("I'm Dead");
+  })
+
+  it('is dead if hunger reaches zero', function() {
+    reusableTamagotchi.hunger = 0;
+    expect(reusableTamagotchi.isAlive()).toEqual("I'm Dead");
+  })
+
+  it('is dead if fun reaches zero', function() {
+    reusableTamagotchi.fun = 0;
+    expect(reusableTamagotchi.isAlive()).toEqual("I'm Dead");
+  })
+
+  it('is dead if energy reaches zero', function() {
+    reusableTamagotchi.energy = 0;
+    expect(reusableTamagotchi.isAlive()).toEqual("I'm Dead");
+  })
 })
